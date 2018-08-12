@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="introduction-component">
     <h1 class="name"> Hi, I'm Mugtaba Subahi </h1>
 
     <div class="card">
@@ -16,9 +16,12 @@ export default {};
 
 <style lang="less" scoped>
 @import (reference) './../styles/index.less';
+.introduction-component {
+  .push-down-8;
+}
 
 .name {
-  .exa;
+  .peta;
   font-family: 'font-medium';
   color: white;
   margin-top: 130px;

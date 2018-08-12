@@ -7,15 +7,17 @@
     <img class="wave wave--1" src="./assets/wave1.svg" alt="wave">
 
     <Introduction />
+    <Skills />
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation.vue';
 import Introduction from './components/Introduction.vue';
+import Skills from './components/Skills.vue';
 
 export default {
-  components: { Navigation, Introduction }
+  components: { Navigation, Introduction, Skills }
 };
 </script>
 
@@ -31,7 +33,7 @@ export default {
 
 .root {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100%;
 }
 
