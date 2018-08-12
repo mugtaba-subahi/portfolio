@@ -1,12 +1,33 @@
-.title {
-  .tera;
-  text-align: center;
-  font-family: 'font-medium';
+.header {
+  .pad-tb-7;
+
+  &__title {
+    .tera;
+    text-align: center;
+    font-family: 'font-medium';
+  }
+  &__underline {
+    width: 30px;
+    margin-top: 4px;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid @underline-color;
+  }
 }
-.underline {
-  width: 30px;
-  margin-top: 4px;
-  height: 1px;
-  border: 0;
-  border-top: 2px solid @underline-color;
+
+.list {
+  .row-gap-1;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+
+  &__item {
+    &:before {
+      .push-right-2;
+      content: '';
+      display: inline-block;
+      height: 10px;
+      width: 10px;
+      border-radius: 3px;
+    }
+  }
 }

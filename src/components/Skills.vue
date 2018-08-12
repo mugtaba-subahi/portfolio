@@ -35,7 +35,7 @@ export default {
     return {
       languages: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL', 'Java'],
       databases: ['MySQL', 'MongoDB', 'Firebase'],
-      tools: ['Git/GitHub', 'VueJS', 'NodeJS', 'TypeScript', 'Stripe', 'GraphQL', 'REST API', 'PWA', 'Adobe XD']
+      tools: ['Git/GitHub', 'VueJS', 'NodeJS', 'TypeScript', 'Stripe', 'GraphQL', 'APIs', 'REST API', 'PWA', 'Adobe XD']
     };
   }
 };
@@ -44,26 +44,21 @@ export default {
 <style lang="less" scoped>
 @import (reference) './../styles/index.less';
 .skills-component {
-  .pad-tb-7;
   .pad-lr-5;
   background-color: #fff;
   border-top: solid 1px @hard-grey-color;
 }
 
 .header {
-  .push-down-6;
-
-  &__title {
-    .title;
-  }
-
-  &__underline {
-    .underline;
-  }
+  .header;
 }
 
 .wrapper {
   .push-down-6;
+
+  &:last-child {
+    .push-down-0;
+  }
 }
 
 .subheading {
@@ -74,21 +69,10 @@ export default {
 }
 
 .list {
-  .row-gap-1;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
+  .list;
 
   &__item {
     color: @light-grey-text-color;
-
-    &:before {
-      .push-right-2;
-      content: '';
-      display: inline-block;
-      height: 10px;
-      width: 10px;
-      border-radius: 3px;
-    }
 
     &--languages:before {
       background-color: @soft-blue-color;
