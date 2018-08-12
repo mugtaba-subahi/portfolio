@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <nav class="nav">
-      <ul>
+    <nav>
+      <ul class="nav">
         <li class="nav__item"> Projects </li>
-        <li class="nav__item"> Resume </li>
+        <li class="nav__item nav__item--resume"> Resume </li>
         <li class="nav__item"> GitHub </li>
         <li class="nav__item"> Contact </li>
       </ul>
@@ -31,9 +31,30 @@ export default {
 <style lang="less">
 // Global styles
 @import './styles/reset.less';
+@import './styles/base.less';
 </style>
 
 <style lang="less" scoped>
 // Scoped styles
 @import (reference) './styles/index.less';
+
+.nav {
+  .pad-tb-7;
+  .pad-lr-4;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+
+  &__item {
+    color: @light-blue-text-color;
+    font-family: 'font-medium';
+
+    &--resume:after {
+      content: '\f019';
+      font-family: FontAwesome;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+  }
+}
 </style>
