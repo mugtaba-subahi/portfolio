@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav class="nav">
+      <ul>
+        <li class="nav__item"> Projects </li>
+        <li class="nav__item"> Resume </li>
+        <li class="nav__item"> GitHub </li>
+        <li class="nav__item"> Contact </li>
+      </ul>
+    </nav>
+
+    <img class="wave" src="./assets/wave1.svg" alt="wave">
+    <img class="wave" src="./assets/wave2.svg" alt="wave">
+    <img class="wave" src="./assets/wave3.svg" alt="wave">
+
+    <h1 class="name"> Hi, I'm Mugtaba Subahi </h1>
+    <div class="card">
+      <h2 class="card__title"> Fullstack Web Developer </h2>
+      <p class="card__text"> I have studied Computer Science at Kingston University and now building up my development skills to a professional level through personal projects </p>
+      <img class="card__img" src="./assets/plants.svg" alt="plants and books">
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  components: {}
+};
 </script>
 
 <style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+// Global styles
+@import './styles/reset.less';
+</style>
+
+<style lang="less" scoped>
+// Scoped styles
+@import (reference) './styles/index.less';
 </style>
