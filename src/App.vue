@@ -1,30 +1,21 @@
 <template>
-  <div id="app">
-    <nav>
-      <ul class="nav">
-        <li class="nav__item"> Projects </li>
-        <li class="nav__item nav__item--resume"> Resume </li>
-        <li class="nav__item"> GitHub </li>
-        <li class="nav__item"> Contact </li>
-      </ul>
-    </nav>
+  <div class="root">
+    <Navigation />
 
-    <img class="wave" src="./assets/wave1.svg" alt="wave">
-    <img class="wave" src="./assets/wave2.svg" alt="wave">
-    <img class="wave" src="./assets/wave3.svg" alt="wave">
+    <img class="wave wave--3" src="./assets/wave3.svg" alt="wave">
+    <img class="wave wave--2" src="./assets/wave2.svg" alt="wave">
+    <img class="wave wave--1" src="./assets/wave1.svg" alt="wave">
 
-    <h1 class="name"> Hi, I'm Mugtaba Subahi </h1>
-    <div class="card">
-      <h2 class="card__title"> Fullstack Web Developer </h2>
-      <p class="card__text"> I have studied Computer Science at Kingston University and now building up my development skills to a professional level through personal projects </p>
-      <img class="card__img" src="./assets/plants.svg" alt="plants and books">
-    </div>
+    <Introduction />
   </div>
 </template>
 
 <script>
+import Navigation from './components/Navigation.vue';
+import Introduction from './components/Introduction.vue';
+
 export default {
-  components: {}
+  components: { Navigation, Introduction }
 };
 </script>
 
@@ -38,23 +29,24 @@ export default {
 // Scoped styles
 @import (reference) './styles/index.less';
 
-.nav {
-  .pad-tb-7;
-  .pad-lr-4;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
+.root {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
 
-  &__item {
-    color: @light-blue-text-color;
-    font-family: 'font-medium';
+.wave {
+  position: absolute;
+  z-index: -1;
+  width: 180%;
+  right: -50px;
 
-    &--resume:after {
-      content: '\f019';
-      font-family: FontAwesome;
-      font-size: 13px;
-      margin-left: 5px;
-    }
+  &--2 {
+    margin-top: 25px;
+  }
+
+  &--1 {
+    margin-top: 50px;
   }
 }
 </style>
