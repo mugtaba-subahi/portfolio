@@ -18,6 +18,7 @@ export default {};
 
 .footer {
   .pad-8;
+  background-color: @soft-grey-color;
   border-top: solid 1px @hard-grey-color;
   text-align: center;
 }
@@ -31,7 +32,7 @@ export default {};
 
 .list {
   &__item {
-    .pad-2;
+    .pad-2--5;
 
     &:before {
       .push-right-3;

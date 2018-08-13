@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="navigation-component">
     <ul class="nav">
       <li class="nav__item"> Projects </li>
       <li class="nav__item nav__item--resume"> Resume </li>
@@ -15,16 +15,22 @@ export default {};
 
 <style lang="less" scoped>
 @import (reference) './../styles/index.less';
+.navigation-component {
+  display: grid;
+  justify-content: center;
+}
 
 .nav {
   .pad-4;
   margin-top: 10px;
   display: grid;
+  max-width: 600px;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
 
   &__item {
     .milli;
+    .pad-lr-1;
     color: @light-blue-text-color;
     font-family: 'font-medium';
 
@@ -33,6 +39,16 @@ export default {};
       font-family: FontAwesome;
       font-size: 13px;
       margin-left: 5px;
+    }
+  }
+}
+
+// -------------------- media queries --------------------
+
+@media @tablet {
+  .nav {
+    &__item {
+      .pad-lr-5;
     }
   }
 }

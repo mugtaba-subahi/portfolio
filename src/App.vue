@@ -34,7 +34,6 @@ export default {
 <style lang="less" scoped>
 // Scoped styles
 @import (reference) './styles/index.less';
-
 .root {
   position: relative;
   overflow-x: hidden;
@@ -42,7 +41,7 @@ export default {
 }
 
 .wave {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   width: 180%;
   right: -50px;

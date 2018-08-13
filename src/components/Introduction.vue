@@ -54,4 +54,18 @@ export default {};
     width: 150px;
   }
 }
+
+// -------------------- media queries --------------------
+
+@media @tablet {
+  .introduction-component {
+    display: grid;
+  }
+
+  .card {
+    max-width: 800px;
+    justify-self: center;
+    padding: @size-6 @size-10 @size-8 @size-10;
+  }
+}
 </style>

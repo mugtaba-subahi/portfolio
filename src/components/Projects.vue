@@ -1,18 +1,23 @@
 <template>
-  <section>
+  <section class="project-component">
     <header class="header">
       <h2 class="header__title"> Projects </h2>
       <hr class="header__underline">
     </header>
 
-    <div class="project" v-for="(project, i) in projects" :key="i">
-      <img class="project__img" :src="project.img" :alt="project.alt">
-      <h3 class="project__title"> {{ project.title }} </h3>
-      <p class="project__description"> {{ project.description }} </p>
-      <ul class="list">
-        <li class="list__item" v-for="(tech, i) in project.list" :key="i"> {{ tech }} </li>
-      </ul>
+    <div class="gradients" v-for="(project, i) in projects" :key="i">
+      <div class="project">
+        <img class="project__img" :src="project.img" :alt="project.alt">
+        <div class="project__info">
+          <h3 class="project__title"> {{ project.title }} </h3>
+          <p class="project__description"> {{ project.description }} </p>
+          <ul class="list">
+            <li class="list__item" v-for="(tech, i) in project.list" :key="i"> {{ tech }} </li>
+          </ul>
+        </div>
+      </div>
     </div>
+
   </section>
 </template>
 
@@ -60,29 +65,13 @@ export default {
 
 .header {
   .header;
-  padding-top: @size-10;
+  padding-top: 120px;
+  padding-bottom: 60px;
   background: #fff;
 }
 
-.project {
-  .pad-6;
-  color: white;
-
-  &__img {
-    .push-down-4;
-    border-radius: 3px;
-    box-shadow: 0 5px 20px rgba(86, 18, 142, 0.1), 0 3px 30px rgba(86, 18, 142, 0.2);
-  }
-
-  &__title {
-    .push-down-2;
-    font-family: 'font-medium';
-  }
-
-  &__description {
-    .milli;
-    .push-down-5;
-  }
+.gradients {
+  display: grid;
 
   // Fly Guys
   &:nth-of-type(1) {
@@ -121,7 +110,45 @@ export default {
   }
 }
 
+.project {
+  .pad-6;
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  justify-self: center;
+
+  &__img {
+    .push-down-4;
+    border-radius: 3px;
+    width: 100%;
+    box-shadow: 0 5px 20px rgba(86, 18, 142, 0.1), 0 3px 30px rgba(86, 18, 142, 0.2);
+  }
+
+  &__title {
+    .push-down-2;
+    font-family: 'font-medium';
+  }
+
+  &__description {
+    .milli;
+    .push-down-5;
+  }
+}
+
 .list {
   .list;
+}
+
+// -------------------- media queries --------------------
+
+@media @laptop {
+  .project {
+    .gap-8;
+    margin: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 1000px;
+  }
 }
 </style>
