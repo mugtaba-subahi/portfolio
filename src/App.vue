@@ -49,7 +49,7 @@ export default {
   z-index: -1;
   top: 0;
   right: 0;
-  width: 150vw;
+  width: 200vw;
 }
 
 .name {
