@@ -62,6 +62,8 @@ export default {};
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
+    width: 1000px;
+    justify-self: center;
   }
 
   .title {
