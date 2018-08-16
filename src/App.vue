@@ -2,11 +2,15 @@
   <div class="root">
     <Navigation />
 
-    <img class="wave wave--3" src="./assets/wave3.svg" alt="wave">
-    <img class="wave wave--2" src="./assets/wave2.svg" alt="wave">
-    <img class="wave wave--1" src="./assets/wave1.svg" alt="wave">
+    <img class="waves" src="./assets/bluewaves.svg" alt="wave">
 
-    <Introduction />
+    <h1 class="name"> Hi, I'm Mugtaba Subahi </h1>
+    <div class="card">
+      <h2 class="card__title"> Fullstack Web Developer </h2>
+      <p class="card__text"> I have studied Computer Science at Kingston University and now building up my development skills to a professional level through personal projects </p>
+      <img class="card__img" src="./assets/plants.svg" alt="wave">
+    </div>
+
     <Skills />
     <Projects />
     <Contact />
@@ -15,13 +19,12 @@
 
 <script>
 import Navigation from './components/Navigation.vue';
-import Introduction from './components/Introduction.vue';
 import Skills from './components/Skills.vue';
 import Projects from './components/Projects.vue';
 import Contact from './components/Contact.vue';
 
 export default {
-  components: { Navigation, Introduction, Skills, Projects, Contact }
+  components: { Navigation, Skills, Projects, Contact }
 };
 </script>
 
@@ -35,23 +38,91 @@ export default {
 // Scoped styles
 @import (reference) './styles/index.less';
 .root {
+  display: grid;
   position: relative;
   overflow-x: hidden;
   height: 100%;
 }
 
-.wave {
-  position: fixed;
+.waves {
+  position: absolute;
   z-index: -1;
-  width: 180%;
-  right: -50px;
+  top: 0;
+  right: 0;
+  width: 150vw;
+}
 
-  &--2 {
-    margin-top: 25px;
+.name {
+  .peta;
+  margin: 30px 0;
+  font-family: 'font-medium';
+  color: white;
+  text-align: center;
+}
+
+.card {
+  .pad-tb-10;
+  .pad-lr-5;
+  .box-shadow-1;
+  position: relative;
+  justify-self: center;
+  max-width: 780px;
+  background-color: #fff;
+  margin: @size-2--5;
+  border-radius: 5px;
+  text-align: center;
+
+  &__title {
+    .push-down-6;
+    color: @light-blue-text-color;
   }
 
-  &--1 {
-    margin-top: 50px;
+  &__text {
+    color: @light-grey-text-color;
+    letter-spacing: 0.2px;
+    max-width: 500px;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+    width: 150px;
+  }
+}
+
+// -------------------- media queries --------------------
+
+@media @tablet {
+  .card {
+    .pad-lr-10;
+  }
+
+  .waves {
+    width: 125vw;
+    top: -5vh;
+  }
+}
+
+@media @laptop {
+  .card {
+    .pad-lr-10;
+  }
+
+  .waves {
+    width: 100vw;
+  }
+}
+
+@media @desktop {
+  .waves {
+    top: -5vh;
+  }
+}
+
+@media @desktop-large {
+  .waves {
+    top: -20vh;
   }
 }
 </style>

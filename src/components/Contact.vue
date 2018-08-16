@@ -54,4 +54,23 @@ export default {};
     }
   }
 }
+
+// -------------------- media queries --------------------
+
+@media @laptop {
+  .footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+
+  .title {
+    .push-down-0;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 </style>

@@ -21,7 +21,7 @@ export default {};
 }
 
 .nav {
-  .pad-4;
+  .pad-3--5;
   margin-top: 10px;
   display: grid;
   max-width: 600px;
@@ -31,8 +31,9 @@ export default {};
   &__item {
     .milli;
     .pad-lr-1;
-    color: @light-blue-text-color;
+    color: #fff;
     font-family: 'font-medium';
+    letter-spacing: 0.5px;
 
     &--resume:after {
       content: '\f019';

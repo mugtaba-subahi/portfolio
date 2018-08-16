@@ -8,6 +8,7 @@
     <div class="gradients" v-for="(project, i) in projects" :key="i">
       <div class="project">
         <img class="project__img" :src="project.img" :alt="project.alt">
+
         <div class="project__info">
           <h3 class="project__title"> {{ project.title }} </h3>
           <p class="project__description"> {{ project.description }} </p>
@@ -111,7 +112,8 @@ export default {
 }
 
 .project {
-  .pad-6;
+  .pad-tb-10;
+  .pad-lr-6;
   color: white;
   width: 100%;
   max-width: 500px;

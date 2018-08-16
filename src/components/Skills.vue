@@ -49,8 +49,6 @@ export default {
 @import (reference) './../styles/index.less';
 .skills-component {
   .pad-lr-5;
-  background-color: #fff;
-  border-top: solid 1px @hard-grey-color;
 }
 
 .header {
@@ -58,7 +56,7 @@ export default {
 }
 
 .wrapper {
-  .push-down-6;
+  .push-down-10;
 
   &:last-child {
     .push-down-0;
