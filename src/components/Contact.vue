@@ -2,14 +2,14 @@
   <footer class="footer">
     <h2 class="title"> Contact </h2>
     <ul class="list">
-      <li>
-        <a class="list__item list__item--email" href="mailto:webmaster@example.com"> M-Subahi@hotmail.com </a>
+      <li class="list__item list__item--email">
+        <a class="link" href="mailto:webmaster@example.com"> M-Subahi@hotmail.com </a>
       </li>
-      <li>
-        <a class="list__item list__item--linkedin" target="_blank" href="https://www.linkedin.com/in/msubahi-8328a4169/"> Mugtaba Subahi </a>
+      <li class="list__item list__item--linkedin">
+        <a class="link" target=" _blank " href="https://www.linkedin.com/in/msubahi-8328a4169/ "> Mugtaba Subahi </a>
       </li>
-      <li>
-        <a class="list__item list__item--github" target="_blank" href="https://github.com/DrSleepy"> Dr Sleepy </a>
+      <li class="list__item list__item--github ">
+        <a class="link" target="_blank" href="https://github.com/DrSleepy"> Dr Sleepy </a>
       </li>
     </ul>
   </footer>
@@ -38,7 +38,6 @@ export default {};
 .list {
   &__item {
     .pad-2--5;
-    color: @black-text-color;
 
     &:before {
       .push-right-3;
@@ -59,6 +58,10 @@ export default {};
       font-family: FontAwesome;
     }
   }
+}
+
+.link {
+  color: @black-text-color;
 }
 
 // -------------------- media queries --------------------

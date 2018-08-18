@@ -13,7 +13,7 @@
           <h3 class="project__title">
             <a :href="project.href" target="_blank"> {{ project.title }} </a>
           </h3>
-          <p class="project__description"> {{ project.description }} </p>
+          <p class="project__description" v-html="project.description"> {{ project.description }} </p>
           <ul class="list">
             <li class="list__item" v-for="(tech, i) in project.list" :key="i"> {{ tech }} </li>
           </ul>
@@ -35,7 +35,7 @@ export default {
           title: 'Fly Guys',
           href: 'https://flyguys.org',
           description:
-            'FlyGuys is a website that displays prices and details of flights. It consists of an admin dashboard to provide staff with the ability to create, edit or delete flights and promotions. This was a university project that was undertaken in order to understand how payments are handled (using Stripe), how pure JS works on the frontend without a framework, the flow of PHP in an MVC structure as well as designing and using a relational database.',
+            'FlyGuys is a website that displays prices and details of flights. It consists of an admin dashboard to provide staff with CRUD operations (create, read, update and delete) on both flights and promotions. <br/> <br/> This was a university project that was undertaken in order to understand how payments are handled (using Stripe), how pure JS works on the frontend without a framework, the flow of PHP in an MVC structure as well as designing and using a relational database.',
           list: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL', 'MySQL', 'Stripe']
         },
         {
@@ -44,7 +44,7 @@ export default {
           title: 'JavaScript, Under the Hood',
           href: 'https://uth.netlify.com',
           description:
-            'This was a recent project I decided to create to better solidify my understanding of the language by converting my notes into a website as a place to often return to. My future plan is to keep adding notes as I progress through the language as well as add additional sections for different tools such as VueJS.',
+            'As it stands, this website explains how the JavaScript engine runs behind the scenes. This is a good read for those feeling rusty at JavaScript or want to test themselves a little on the languages itself. <br/> <br/> This was created to better solidify my understanding of the language by converting my notes into a website to have a place to often return to. My future plan is to keep adding notes as I progress through the language as well as add additional sections for different tools such as VueJS.',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'PWA']
         },
         {
@@ -53,7 +53,7 @@ export default {
           title: 'Salah',
           href: 'https://salah.io',
           description:
-            'Salah is a website that uses an external API to retrieve data on Islamic prayer times given the user’s location. This project was designed to be used on mobiles phones. The purpose of the project, however, was to ease myself into using NodeJS, TypeScript and how a PWA works with service workers.',
+            'Salah is a website that use a external APIs to retrieve data on Islamic prayer times given the user’s location. This project was designed to be used on mobiles phones. <br/> <br/> The purpose of the project, however, was to ease myself into using NodeJS, TypeScript and how PWA works with service workers.',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'NodeJs', 'TypeScript', 'Firebase', 'APIs', 'PWA']
         },
         {
@@ -62,7 +62,7 @@ export default {
           title: 'Castle Clash Hub',
           href: 'https://castleclash.netlify.com/',
           description:
-            'My goal for this project was to allow players of the game, Castle Clash, to have a place to list their in-game heroes and find other players with the same loadout. This was a personal (unfinished) project I picked up in my early days before understanding JS or CSS. My main purpose for developing this project was to try my hand at VueJS alongside a NoSQL database, Firebase RTDB.',
+            'My goal for this project was to allow players of the game, Castle Clash, to have a place to list their in-game heroes and find other players with the same loadout. <br/> <br/> This was a personal (unfinished) project I picked up in my early days before understanding JS or CSS. My main purpose for developing this project was to try my hand at VueJS alongside a NoSQL database, Firebase RTDB.',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'Firebase']
         }
       ]
