@@ -34,7 +34,8 @@ export default {
           atl: 'A preview of the Fly Guys website',
           title: 'Fly Guys',
           href: 'https://flyguys.org',
-          description: 'A site for flights',
+          description:
+            'FlyGuys is a website that displays prices and details of flights. It consists of an admin dashboard to provide staff with the ability to create, edit or delete flights and promotions. This was a university project that was undertaken in order to understand how payments are handled (using Stripe), how pure JS works on the frontend without a framework, the flow of PHP in an MVC structure as well as designing and using a relational database.',
           list: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL', 'MySQL', 'Stripe']
         },
         {
@@ -42,7 +43,8 @@ export default {
           atl: 'A preview of JavaScript, Under the hood',
           title: 'JavaScript, Under the Hood',
           href: 'https://uth.netlify.com',
-          description: 'For those needing a refresher at JavaScript',
+          description:
+            'This was a recent project I decided to create to better solidify my understanding of the language by converting my notes into a website as a place to often return to. My future plan is to keep adding notes as I progress through the language as well as add additional sections for different tools such as VueJS.',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'PWA']
         },
         {
@@ -50,7 +52,8 @@ export default {
           atl: 'A preview of the Salah mobile website',
           title: 'Salah',
           href: 'https://salah.io',
-          description: 'A tracker and reminder for your islamic prayers',
+          description:
+            'Salah is a website that uses an external API to retrieve data on Islamic prayer times given the user’s location. This project was designed to be used on mobiles phones. The purpose of the project, however, was to ease myself into using NodeJS, TypeScript and how a PWA works with service workers.',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'NodeJs', 'TypeScript', 'Firebase', 'APIs', 'PWA']
         },
         {
@@ -58,7 +61,8 @@ export default {
           atl: 'A preview of the Castle Clash Hub website',
           title: 'Castle Clash Hub',
           href: 'https://castleclash.netlify.com/',
-          description: 'An (unfinished) hub for all Castle Clash players',
+          description:
+            'My goal for this project was to allow players of the game, Castle Clash, to have a place to list their in-game heroes and find other players with the same loadout. This was a personal (unfinished) project I picked up in my early days before understanding JS or CSS. My main purpose for developing this project was to try my hand at VueJS alongside a NoSQL database, Firebase RTDB.',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'Firebase']
         }
       ]
@@ -124,6 +128,7 @@ export default {
   width: 100%;
   max-width: 500px;
   justify-self: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 
   &__img {
     .push-down-4;
@@ -155,6 +160,14 @@ export default {
 }
 
 // -------------------- media queries --------------------
+
+@media @laptop {
+  .project {
+    &__description {
+      .kilo;
+    }
+  }
+}
 
 @media @laptop {
   .project {

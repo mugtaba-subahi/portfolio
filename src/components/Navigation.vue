@@ -5,7 +5,7 @@
         <a @click="smoothScrollHandler" class="nav__item" href="#projects"> Projects </a>
       </li>
       <li>
-        <a class="nav__item nav__item--resume" href="../CV.pdf" download> Resume </a>
+        <a class="nav__item nav__item--resume" target="_blank" href="https://drive.google.com/file/d/153v31Ubj58XOPFXrd_AOEChEI6B0LM0V/view?usp=sharing" download> Resume </a>
       </li>
       <li>
         <a class="nav__item" target="_blank" href="https://github.com/DrSleepy"> GitHub </a>
@@ -50,6 +50,7 @@ export default {
     .pad-lr-1;
     font-family: 'font-medium';
     letter-spacing: 0.5px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
 
     &--resume:after {
       content: '\f019';
@@ -66,6 +67,7 @@ export default {
   .nav {
     &__item {
       .pad-lr-5;
+      .kilo;
     }
   }
 }
