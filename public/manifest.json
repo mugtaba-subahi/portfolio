@@ -1,15 +1,10 @@
 {
-  "name": "client",
-  "short_name": "client",
+  "name": "Mugtaba Subahi",
+  "short_name": "MS",
   "icons": [
     {
-      "src": "/img/icons/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/img/icons/android-chrome-512x512.png",
-      "sizes": "512x512",
+      "src": "/android-chrome-144x144.png",
+      "sizes": "144x144",
       "type": "image/png"
     }
   ],
