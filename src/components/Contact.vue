@@ -2,9 +2,15 @@
   <footer class="footer">
     <h2 class="title"> Contact </h2>
     <ul class="list">
-      <li class="list__item list__item--email"> M-Subahi@hotmail.com </li>
-      <li class="list__item list__item--linkedin"> Mugtaba Subahi </li>
-      <li class="list__item list__item--github"> Dr Sleepy </li>
+      <li>
+        <a class="list__item list__item--email" href="mailto:webmaster@example.com"> M-Subahi@hotmail.com </a>
+      </li>
+      <li>
+        <a class="list__item list__item--linkedin" target="_blank" href="https://www.linkedin.com/in/msubahi-8328a4169/"> Mugtaba Subahi </a>
+      </li>
+      <li>
+        <a class="list__item list__item--github" target="_blank" href="https://github.com/DrSleepy"> Dr Sleepy </a>
+      </li>
     </ul>
   </footer>
 </template>
@@ -18,7 +24,6 @@ export default {};
 
 .footer {
   .pad-8;
-  background-color: @soft-grey-color;
   border-top: solid 1px @hard-grey-color;
   text-align: center;
 }
@@ -33,6 +38,7 @@ export default {};
 .list {
   &__item {
     .pad-2--5;
+    color: @black-text-color;
 
     &:before {
       .push-right-3;

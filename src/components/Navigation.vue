@@ -1,16 +1,33 @@
 <template>
   <nav class="navigation-component">
     <ul class="nav">
-      <li class="nav__item"> Projects </li>
-      <li class="nav__item nav__item--resume"> Resume </li>
-      <li class="nav__item"> GitHub </li>
-      <li class="nav__item"> Contact </li>
+      <li>
+        <a @click="smoothScrollHandler" class="nav__item" href="#projects"> Projects </a>
+      </li>
+      <li>
+        <a class="nav__item nav__item--resume" href="../CV.pdf" download> Resume </a>
+      </li>
+      <li>
+        <a class="nav__item" target="_blank" href="https://github.com/DrSleepy"> GitHub </a>
+      </li>
+      <li>
+        <a @click="smoothScrollHandler" class="nav__item" href="#contact"> Contact </a>
+      </li>
+
     </ul>
   </nav>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    smoothScrollHandler() {
+      event.preventDefault();
+      const href = event.target.getAttribute('href');
+      document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+};
 </script>
 
 <style lang="less" scoped>
@@ -31,7 +48,6 @@ export default {};
   &__item {
     .milli;
     .pad-lr-1;
-    color: #fff;
     font-family: 'font-medium';
     letter-spacing: 0.5px;
 

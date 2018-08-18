@@ -2,18 +2,18 @@
   <div class="root">
     <Navigation />
 
-    <img class="waves" src="./assets/bluewaves.svg" alt="wave">
+    <img class="waves" src="./assets/bluewaves.svg" alt="waves">
 
     <h1 class="name"> Hi, I'm Mugtaba Subahi </h1>
     <div class="card">
       <h2 class="card__title"> Fullstack Web Developer </h2>
       <p class="card__text"> I have studied Computer Science at Kingston University and now building up my development skills to a professional level through personal projects </p>
-      <img class="card__img" src="./assets/plants.svg" alt="wave">
+      <img class="card__img" src="./assets/plants.svg" alt="A set of plants and books">
     </div>
 
     <Skills />
-    <Projects />
-    <Contact />
+    <Projects id="projects" />
+    <Contact id="contact" />
   </div>
 </template>
 

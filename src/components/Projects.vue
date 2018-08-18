@@ -7,10 +7,12 @@
 
     <div class="gradients" v-for="(project, i) in projects" :key="i">
       <div class="project">
-        <img class="project__img" :src="project.img" :alt="project.alt">
+        <a :href="project.href" target="_blank"> <img class="project__img" :src="project.img" :alt="project.alt"> </a>
 
         <div class="project__info">
-          <h3 class="project__title"> {{ project.title }} </h3>
+          <h3 class="project__title">
+            <a :href="project.href" target="_blank"> {{ project.title }} </a>
+          </h3>
           <p class="project__description"> {{ project.description }} </p>
           <ul class="list">
             <li class="list__item" v-for="(tech, i) in project.list" :key="i"> {{ tech }} </li>
@@ -31,6 +33,7 @@ export default {
           img: require('./../assets/flyguys.svg'),
           atl: 'A preview of the Fly Guys website',
           title: 'Fly Guys',
+          href: 'https://flyguys.org',
           description: 'A site for flights',
           list: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL', 'MySQL', 'Stripe']
         },
@@ -38,6 +41,7 @@ export default {
           img: require('./../assets/uth.svg'),
           atl: 'A preview of JavaScript, Under the hood',
           title: 'JavaScript, Under the Hood',
+          href: 'https://uth.netlify.com',
           description: 'For those needing a refresher at JavaScript',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'PWA']
         },
@@ -45,6 +49,7 @@ export default {
           img: require('./../assets/salah.svg'),
           atl: 'A preview of the Salah mobile website',
           title: 'Salah',
+          href: 'https://salah.io',
           description: 'A tracker and reminder for your islamic prayers',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'NodeJs', 'TypeScript', 'Firebase', 'APIs', 'PWA']
         },
@@ -52,6 +57,7 @@ export default {
           img: require('./../assets/castleclash.svg'),
           atl: 'A preview of the Castle Clash Hub website',
           title: 'Castle Clash Hub',
+          href: 'https://castleclash.netlify.com/',
           description: 'An (unfinished) hub for all Castle Clash players',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'Firebase']
         }
@@ -124,9 +130,16 @@ export default {
     border-radius: 3px;
     width: 100%;
     box-shadow: 0 5px 20px rgba(86, 18, 142, 0.1), 0 3px 30px rgba(86, 18, 142, 0.2);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 19px 28px rgba(0, 0, 0, 0.1), 0 12px 12px rgba(0, 0, 0, 0.1);
+    }
   }
 
   &__title {
+    .tera;
     .push-down-2;
     font-family: 'font-medium';
   }

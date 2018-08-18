@@ -109,10 +109,4 @@ export default {
     grid-template-columns: repeat(7, 1fr);
   }
 }
-
-@media @desktop {
-  .list {
-    grid-template-columns: repeat(9, 1fr);
-  }
-}
 </style>
