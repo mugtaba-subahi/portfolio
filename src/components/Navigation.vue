@@ -5,7 +5,7 @@
         <a @click="smoothScrollHandler" class="nav__item" href="#projects"> Projects </a>
       </li>
       <li>
-        <a class="nav__item nav__item--resume" target="_blank" href="https://drive.google.com/file/d/153v31Ubj58XOPFXrd_AOEChEI6B0LM0V/view?usp=sharing" download> Resume </a>
+        <a class="nav__item" target="_blank" href="https://drive.google.com/file/d/153v31Ubj58XOPFXrd_AOEChEI6B0LM0V/view?usp=sharing" download> Resume </a>
       </li>
       <li>
         <a class="nav__item" target="_blank" href="https://github.com/DrSleepy"> GitHub </a>
@@ -34,14 +34,12 @@ export default {
 @import (reference) './../styles/index.less';
 .navigation-component {
   display: grid;
-  justify-content: center;
 }
 
 .nav {
   .pad-3--5;
   margin-top: 10px;
   display: grid;
-  max-width: 600px;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
 
@@ -50,14 +48,6 @@ export default {
     .pad-lr-1;
     font-family: 'font-medium';
     letter-spacing: 0.5px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
-
-    &--resume:after {
-      content: '\f019';
-      font-family: FontAwesome;
-      font-size: 13px;
-      margin-left: 5px;
-    }
   }
 }
 
@@ -65,6 +55,8 @@ export default {
 
 @media @tablet {
   .nav {
+    justify-self: center;
+
     &__item {
       .pad-lr-5;
       .kilo;
