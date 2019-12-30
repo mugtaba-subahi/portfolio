@@ -1,15 +1,15 @@
 <template>
   <footer class="footer">
-    <h2 class="title"> Contact </h2>
+    <h2 class="title">Contact</h2>
     <ul class="list">
       <li class="list__item list__item--email">
-        <a class="link" href="mailto:webmaster@example.com"> M-Subahi@hotmail.com </a>
+        <a class="link" href="mailto:webmaster@example.com">M-Subahi@hotmail.com</a>
       </li>
       <li class="list__item list__item--linkedin">
-        <a class="link" target=" _blank " href="https://www.linkedin.com/in/msubahi-8328a4169/ "> Mugtaba Subahi </a>
+        <a class="link" target=" _blank " href="https://www.linkedin.com/in/msubahi-8328a4169/ ">Mugtaba Subahi</a>
       </li>
-      <li class="list__item list__item--github ">
-        <a class="link" target="_blank" href="https://github.com/DrSleepy"> Dr Sleepy </a>
+      <li class="list__item list__item--github">
+        <a class="link" target="_blank" href="https://https://github.com/mugtaba-subahi">mugtaba-subahi</a>
       </li>
     </ul>
   </footer>
@@ -20,7 +20,7 @@ export default {};
 </script>
 
 <style lang="less" scoped>
-@import (reference) './../styles/index.less';
+@import (reference) "./../styles/index.less";
 
 .footer {
   .pad-8;
@@ -32,7 +32,7 @@ export default {};
   .push-down-5;
   .tera;
   color: @black-text-color;
-  font-family: 'font-medium';
+  font-family: "font-medium";
 }
 
 .list {
@@ -45,16 +45,16 @@ export default {};
     }
 
     &--email:before {
-      content: '@';
+      content: "@";
     }
 
     &--linkedin:before {
-      content: '\f08c';
+      content: "\f08c";
       font-family: FontAwesome;
     }
 
     &--github:before {
-      content: '\f09b';
+      content: "\f09b";
       font-family: FontAwesome;
     }
   }

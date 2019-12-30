@@ -2,13 +2,17 @@
   <div class="root">
     <Navigation />
 
-    <img class="waves" src="./assets/bluewaves.svg" alt="waves">
+    <img class="waves" src="./assets/bluewaves.svg" alt="waves" />
 
-    <h1 class="name"> Hi, I'm Mugtaba Subahi </h1>
+    <h1 class="name">Hi, I'm Mugtaba Subahi</h1>
     <div class="card">
-      <h2 class="card__title"> Fullstack Web Developer </h2>
-      <p class="card__text"> I have studied Computer Science at Kingston University and now building up my development skills to a professional level through personal projects </p>
-      <img class="card__img" src="./assets/plants.svg" alt="A set of plants and books">
+      <h2 class="card__title">Software Engineer</h2>
+
+      <p
+        class="card__text"
+      >I have studied Computer Science at Kingston University whereafter I became a certified AWS Developer, working towards becoming a certified AWS Solutions Architect whilst currently hired as a professional Backend Web Developer at AAT.</p>
+
+      <img class="card__img" src="./assets/plants.svg" alt="A set of plants and books" />
     </div>
 
     <Skills />
@@ -18,10 +22,10 @@
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue';
-import Skills from './components/Skills.vue';
-import Projects from './components/Projects.vue';
-import Contact from './components/Contact.vue';
+import Navigation from "./components/Navigation.vue";
+import Skills from "./components/Skills.vue";
+import Projects from "./components/Projects.vue";
+import Contact from "./components/Contact.vue";
 
 export default {
   components: { Navigation, Skills, Projects, Contact }
@@ -30,13 +34,13 @@ export default {
 
 <style lang="less">
 // Global styles
-@import './styles/reset.less';
-@import './styles/base.less';
+@import "./styles/reset.less";
+@import "./styles/base.less";
 </style>
 
 <style lang="less" scoped>
 // Scoped styles
-@import (reference) './styles/index.less';
+@import (reference) "./styles/index.less";
 .root {
   display: grid;
   position: relative;
@@ -55,7 +59,7 @@ export default {
 .name {
   .peta;
   margin: 30px 0;
-  font-family: 'font-medium';
+  font-family: "font-medium";
   color: white;
   text-align: center;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
@@ -75,12 +79,14 @@ export default {
 
   &__title {
     .push-down-6;
+    .giga;
     color: @light-blue-text-color;
   }
 
   &__text {
     color: @light-grey-text-color;
     letter-spacing: 0.2px;
+    font-family: "Roboto";
     max-width: 500px;
   }
 
