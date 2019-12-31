@@ -34,7 +34,7 @@ export default {
           img: require("./../assets/flyguys.svg"),
           atl: "A preview of the Fly Guys website",
           title: "Fly Guys",
-          href: "https://flyguys.org",
+          href: "",
           description:
             "FlyGuys is a website that displays prices and details of flights. It consists of an admin dashboard to provide staff with CRUD operations (create, read, update and delete) on both flights and promotions. <br/> <br/> This was a university project that was undertaken in order to understand how payments are handled (using Stripe), how pure JS works on the frontend without a framework, the flow of PHP in an MVC structure as well as designing and using a relational database.",
           list: ["HTML", "CSS", "JavaScript", "PHP", "SQL", "MySQL", "Stripe"]
@@ -52,7 +52,7 @@ export default {
           img: require("./../assets/salah.svg"),
           atl: "A preview of the Salah mobile website",
           title: "Salah",
-          href: "https://salah.io",
+          href: "",
           description:
             "Salah is a website that use a external APIs to retrieve data on Islamic prayer times given the user’s location. This project was designed to be used on mobiles phones. <br/> <br/> The purpose of the project, however, was to ease myself into using NodeJS, TypeScript and how PWA works with service workers.",
           list: [

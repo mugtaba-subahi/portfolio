@@ -10,7 +10,7 @@
 
       <p
         class="card__text"
-      >I have studied Computer Science at Kingston University whereafter I became a certified AWS Developer, working towards becoming a certified AWS Solutions Architect whilst currently hired as a professional Backend Web Developer at AAT.</p>
+      >I have studied Computer Science at Kingston University whereafter I became a certified AWS Developer. I am currently working towards becoming a certified AWS Solutions Architect whilst hired as a professional Backend Web Developer at AAT.</p>
 
       <img class="card__img" src="./assets/plants.svg" alt="A set of plants and books" />
     </div>
@@ -85,7 +85,6 @@ export default {
 
   &__text {
     color: @light-grey-text-color;
-    letter-spacing: 0.2px;
     font-family: "Roboto";
     max-width: 500px;
   }
