@@ -1,31 +1,37 @@
 <template>
   <section class="skills-component">
     <header class="header">
-      <h2 class="header__title"> Skills </h2>
-      <hr class="header__underline">
+      <h2 class="header__title">Skills</h2>
+      <hr class="header__underline" />
     </header>
 
     <div class="wrapper">
-      <h3 class="subheading"> Languages </h3>
+      <h3 class="subheading">Languages</h3>
       <ul class="list">
-        <li class="list__item list__item--languages" v-for="(language, i) in languages" :key="i"> {{ language }} </li>
+        <li class="list__item list__item--languages" v-for="(language, i) in languages" :key="i">{{ language }}</li>
       </ul>
     </div>
 
     <div class="wrapper">
-      <h3 class="subheading"> Databases </h3>
+      <h3 class="subheading">Databases</h3>
       <ul class="list">
-        <li class="list__item list__item--databases" v-for="(database, i) in databases" :key="i"> {{ database }} </li>
+        <li class="list__item list__item--databases" v-for="(database, i) in databases" :key="i">{{ database }}</li>
       </ul>
     </div>
 
     <div class="wrapper">
-      <h3 class="subheading"> Tools </h3>
+      <h3 class="subheading">Tools</h3>
       <ul class="list">
-        <li class="list__item list__item--tools" v-for="(tool, i) in tools" :key="i"> {{ tool }} </li>
+        <li class="list__item list__item--tools" v-for="(tool, i) in tools" :key="i">{{ tool }}</li>
       </ul>
     </div>
 
+    <div class="wrapper">
+      <h3 class="subheading">Other</h3>
+      <ul class="list">
+        <li class="list__item list__item--others" v-for="(other, i) in others" :key="i">{{ other }}</li>
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -33,16 +39,39 @@
 export default {
   data() {
     return {
-      languages: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL', 'Java'],
-      databases: ['MySQL', 'MongoDB', 'Firebase'],
-      tools: ['Git/GitHub', 'VueJS', 'NodeJS', 'TypeScript', 'Stripe', 'GraphQL', 'APIs', 'REST API', 'PWA', 'Adobe XD']
+      languages: ["HTML", "CSS", "JavaScript", "PHP", "SQL", "Java"],
+      databases: ["DynamoDB", "MongoDB", "MySQL", "Firebase RTDB"],
+      tools: ["Vue", "VuePress", "Vuex", "React", "Redux", "Angular", "NodeJs"],
+      others: [
+        "AWS",
+        "Serverless",
+        "Microservices",
+        "Docker",
+        "CI/CD",
+        "DevOps",
+        "Elasticsearch",
+        "Unit Testing",
+        "Integration Testing",
+        "Load Testing",
+        "Documentation",
+        "Data Modelling",
+        "Git",
+        "TypeScript",
+        "REST",
+        "Design System",
+        "PWA",
+        "Adobe XD",
+        "8pt Grid",
+        "GraphQL",
+        "Typography Rhythm"
+      ]
     };
   }
 };
 </script>
 
 <style lang="less" scoped>
-@import (reference) './../styles/index.less';
+@import (reference) "./../styles/index.less";
 .skills-component {
   .pad-lr-5;
 }
@@ -62,7 +91,7 @@ export default {
 .subheading {
   .mega;
   .push-down-3;
-  font-family: 'font-medium';
+  font-family: "font-medium";
   color: @black-text-color;
 }
 
@@ -77,10 +106,14 @@ export default {
     }
 
     &--databases:before {
-      background-color: @soft-green-color;
+      background-color: @soft-yellow-color;
     }
 
     &--tools:before {
+      background-color: @soft-green-color;
+    }
+
+    &--others:before {
       background-color: @soft-pink-color;
     }
   }
@@ -93,7 +126,7 @@ export default {
     max-width: 1200px;
   }
   .list {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -106,7 +139,7 @@ export default {
 
   .list {
     .col-gap-5;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 </style>
