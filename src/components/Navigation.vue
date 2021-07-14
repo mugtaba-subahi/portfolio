@@ -2,18 +2,17 @@
   <nav class="navigation-component">
     <ul class="nav">
       <li>
-        <a @click="smoothScrollHandler" class="nav__item" href="#projects"> Projects </a>
+        <a @click="smoothScrollHandler" class="nav__item" href="#projects">Projects</a>
       </li>
       <li>
-        <a class="nav__item" target="_blank" href="https://drive.google.com/file/d/153v31Ubj58XOPFXrd_AOEChEI6B0LM0V/view?usp=sharing" download> Resume </a>
+        <a class="nav__item" target="_blank" href="https://drive.google.com/file/d/10WfH_jZK2TSUKOlO82v6RQ5pk6JbtDbw/view?usp=sharing" download>Resume</a>
       </li>
       <li>
-        <a class="nav__item" target="_blank" href="https://github.com/DrSleepy"> GitHub </a>
+        <a class="nav__item" target="_blank" href="https://github.com/mugtaba-subahi">GitHub</a>
       </li>
       <li>
-        <a @click="smoothScrollHandler" class="nav__item" href="#contact"> Contact </a>
+        <a @click="smoothScrollHandler" class="nav__item" href="#contact">Contact</a>
       </li>
-
     </ul>
   </nav>
 </template>
@@ -23,15 +22,17 @@ export default {
   methods: {
     smoothScrollHandler() {
       event.preventDefault();
-      const href = event.target.getAttribute('href');
-      document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const href = event.target.getAttribute("href");
+      document
+        .querySelector(href)
+        .scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
 };
 </script>
 
 <style lang="less" scoped>
-@import (reference) './../styles/index.less';
+@import (reference) "./../styles/index.less";
 .navigation-component {
   display: grid;
 }
@@ -46,7 +47,7 @@ export default {
   &__item {
     .milli;
     .pad-lr-1;
-    font-family: 'font-medium';
+    font-family: "font-medium";
     letter-spacing: 0.5px;
   }
 }
