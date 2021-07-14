@@ -5,7 +5,7 @@
         <a @click="smoothScrollHandler" class="nav__item" href="#projects">Projects</a>
       </li>
       <li>
-        <a class="nav__item" target="_blank" href="https://drive.google.com/open?id=145nMgASGzq_zasmIzXyJr5BIyGqKX2aX" download>Resume</a>
+        <a class="nav__item" target="_blank" href="https://drive.google.com/file/d/10WfH_jZK2TSUKOlO82v6RQ5pk6JbtDbw/view?usp=sharing" download>Resume</a>
       </li>
       <li>
         <a class="nav__item" target="_blank" href="https://github.com/mugtaba-subahi">GitHub</a>

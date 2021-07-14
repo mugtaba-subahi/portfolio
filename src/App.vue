@@ -8,9 +8,9 @@
     <div class="card">
       <h2 class="card__title">Software Engineer</h2>
 
-      <p
-        class="card__text"
-      >I have studied Computer Science at Kingston University whereafter I became a certified AWS Developer. I am currently working towards becoming a certified AWS Solutions Architect whilst hired as a professional Backend Web Developer at AAT.</p>
+      <p class="card__text">
+        I have studied Computer Science at Kingston University whereafter I joined Association of Accounting Technicians (AAT) <br/> as a backend developer. During my few years, I completed two AWS certifications (Developer & Architect) before my journey led me to joining Dunelm, where I currently work. 
+      </p>
 
       <img class="card__img" src="./assets/plants.svg" alt="A set of plants and books" />
     </div>
