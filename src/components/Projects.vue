@@ -2,6 +2,7 @@
   <section class="project-component">
     <header class="header">
       <h2 class="header__title"> Projects </h2>
+      <p class="header__subtitle"> (Yes, I like purple!) </p>
       <hr class="header__underline">
     </header>
 
@@ -48,12 +49,12 @@ export default {
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'PWA']
         },
         {
-          img: require('./../assets/salah.svg'),
-          atl: 'A preview of the Salah mobile website',
-          title: 'Salah',
-          href: 'https://salah.io',
+          img: require('./../assets/athan.png'),
+          atl: 'A preview of the Athan mobile website',
+          title: 'Athan',
+          href: 'https://athan.netlify.app/',
           description:
-            'Salah is a website that use a external APIs to retrieve data on Islamic prayer times given the user’s location. This project was designed to be used on mobiles phones. <br/> <br/> The purpose of the project, however, was to ease myself into using NodeJS, TypeScript and how PWA works with service workers.',
+            'Athan is a website that use a external APIs to retrieve data on Islamic prayer times given the user’s location. This project was designed to be used on mobiles phones. <br/> <br/> The purpose of the project, however, was to ease myself into using NodeJS, TypeScript and how PWA works with service workers.',
           list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'NodeJs', 'TypeScript', 'Firebase', 'APIs', 'PWA']
         },
         {
@@ -74,15 +75,31 @@ export default {
 <style lang="less" scoped>
 @import (reference) './../styles/index.less';
 
+.project-component{
+  display: grid;
+  justify-content: center;
+
+}
+
 .header {
   .header;
   padding-top: 120px;
   padding-bottom: 60px;
   background: #fff;
+
+  &__subtitle{
+    text-align: center;
+    color: #b7c8d8;
+  }
 }
 
 .gradients {
   display: grid;
+  max-width: 1400px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(86, 18, 142, 0.1), 0 3px 10px rgba(86, 18, 142, 0.2);
+
 
   // Fly Guys
   &:nth-of-type(1) {
