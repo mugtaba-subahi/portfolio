@@ -9,7 +9,7 @@
       <h2 class="card__title">Software Engineer</h2>
 
       <p class="card__text">
-        Studied Computer Science at Kingston University whereafter I joined Association of Accounting Technicians (AAT) <br/> as a backend developer. <br/><br/> Completed two AWS certifications (Developer & Architect) before my journey led me to joining Dunelm, where I currently also work as a backend developer. 
+        Studied Computer Science at Kingston University whereafter I joined <strong>Association of Accounting Technicians (AAT)</strong> <br/> as a backend developer. <br/><br/> Completed two AWS certifications (Developer & Architect) before my journey led me to joining <strong>Dunelm</strong>, where I currently also work <br/> as a backend developer. 
       </p>
 
       <img class="card__img" src="./assets/plants.svg" alt="A set of plants and books" />
@@ -41,6 +41,7 @@ export default {
 <style lang="less" scoped>
 // Scoped styles
 @import (reference) "./styles/index.less";
+
 .root {
   display: grid;
   position: relative;
