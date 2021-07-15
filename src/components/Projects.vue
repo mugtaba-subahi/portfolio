@@ -17,6 +17,9 @@
             <a :href="project.href || null" target="_blank">{{ project.title }}</a>
           </h3>
           <p class="project__description" v-html="project.description">{{ project.description }}</p>
+          <p class="project__link">
+            <a :href="project.link" target="_blank">{{ project.link }}</a>
+          </p>
           <ul class="list">
             <li class="list__item" v-for="(tech, i) in project.list" :key="i">{{ tech }}</li>
           </ul>
@@ -38,8 +41,9 @@ export default {
           title: "JavaScript, Under the Hood",
           href: "https://uth.netlify.com",
           description:
-            "As it stands, this website explains how the JavaScript engine runs behind the scenes. This is a good read for those feeling rusty at JavaScript or want to test themselves a little on the languages itself. <br/> <br/> This was created to better solidify my understanding of the language by converting my notes into a website to have a place to often return to. My future plan is to keep adding notes as I progress through the language as well as add additional sections for different tools such as VueJS.",
-          list: ["HTML", "CSS", "JavaScript", "VueJs", "PWA"]
+            "As it stands, this website explains how the JavaScript engine runs behind the scenes. This is a good read for those feeling rusty at JavaScript or want to test themselves a little on the languages itself. <br/> <br/> This was created to better solidify my understanding of the language by converting my notes into a website to have a place to often return to. My future plan is to keep adding notes as I progress through the language as well as add additional sections for different tools such as Vuejs.",
+          link: "https://github.com/mugtaba-subahi/Under-the-Hood",
+          list: ["HTML", "CSS", "JavaScript", "Vuejs", "PWA"]
         },
         {
           img: require("./../assets/castleclash.png"),
@@ -47,8 +51,9 @@ export default {
           title: "Castle Clash Hub",
           href: "https://castleclash.netlify.com/",
           description:
-            "My goal for this project was to allow players of the game, Castle Clash, to have a place to list their in-game heroes and find other players with the same loadout. <br/> <br/> This was a personal (unfinished) project I picked up in my early days before understanding JS or CSS. My main purpose for developing this project was to try my hand at VueJS alongside a NoSQL database, Firebase RTDB.",
-          list: ["HTML", "CSS", "JavaScript", "VueJs", "Firebase"]
+            "My goal for this project was to allow players of the game, Castle Clash, to have a place to list their in-game heroes and find other players with the same loadout. <br/> <br/> This was a personal (unfinished) project I picked up in my early days before understanding JS or CSS. My main purpose for developing this project was to try my hand at Vuejs alongside a NoSQL database, Firebase RTDB.",
+          link: "https://github.com/mugtaba-subahi/Castle-Clash",
+          list: ["HTML", "CSS", "JavaScript", "Vuejs", "Firebase"]
         },
         {
           img: require('./../assets/athan.png'),
@@ -56,8 +61,9 @@ export default {
           title: 'Athan',
           href: 'https://athan.netlify.app/',
           description:
-            'Athan is a website that use a external APIs to retrieve data on Islamic prayer times given the user’s location. This project was designed to be used on mobiles phones. <br/> <br/> The purpose of the project, however, was to ease myself into using NodeJS, TypeScript and how PWA works with service workers.',
-          list: ['HTML', 'CSS', 'JavaScript', 'VueJs', 'NodeJs', 'TypeScript', 'Firebase', 'APIs', 'PWA']
+            'Athan is a website that use a external APIs to retrieve data on Islamic prayer times given the user’s location. This project was designed to be used on mobiles phones. <br/> <br/> The purpose of the project, however, was to ease myself into using Nodejs, TypeScript and how PWA works with service workers.',
+          link: "https://github.com/mugtaba-subahi/salah",
+          list: ['HTML', 'CSS', 'JavaScript', 'Vuejs', 'Nodejs', 'TypeScript', 'Firebase', 'APIs', 'PWA']
         },
         {
           img: require("./../assets/flyguys.svg"),
@@ -65,7 +71,8 @@ export default {
           title: "Fly Guys - (Terminated)",
           href: "",
           description:
-            "FlyGuys is a website that displays prices and details of flights. It consists of an admin dashboard to provide staff with CRUD operations (create, read, update and delete) on both flights and promotions. <br/> <br/> This was a university project that was undertaken in order to understand how payments are handled (using Stripe), how pure JS works on the frontend without a framework, the flow of PHP in an MVC structure as well as designing and using a relational database.",
+            "FlyGuys is a website that displays prices and details of flights. It consists of an admin dashboard to provide staff with CRUD operations (create, read, update and delete) on both flights and promotions. <br/> <br/> This was a university project that was undertaken in order to understand how payments are handled (using Stripe), how vanilla JS works on the frontend without a framework, the flow of PHP in an MVC structure as well as designing and using a relational database.",
+          link: "https://github.com/mugtaba-subahi/FlyGuys",
           list: ["HTML", "CSS", "JavaScript", "PHP", "SQL", "MySQL", "Stripe"]
         },
       ]
@@ -91,8 +98,6 @@ export default {
 
 .gradients {
   display: grid;
-  margin-bottom: 30px;
-  border-radius: 4px;
   box-shadow: 0 3px 10px rgba(86, 18, 142, 0.1), 0 3px 10px rgba(86, 18, 142, 0.2);
 
 
@@ -163,6 +168,18 @@ export default {
     .tera;
     .push-down-2;
     font-family: "font-medium";
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  &__link{
+    .push-down-4;
+
+    &:hover{
+      text-decoration: underline;
+    }
   }
 
   &__description {

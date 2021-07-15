@@ -41,7 +41,7 @@ export default {
     return {
       languages: ["HTML", "CSS", "JavaScript", "PHP", "SQL", "Java"],
       databases: ["DynamoDB", "MongoDB", "MySQL", "Firebase RTDB"],
-      tools: ["Vue", "VuePress", "Vuex", "React", "Redux", "Angular", "NodeJs"],
+      tools: ["Vue", "VuePress", "Vuex", "React", "Redux", "Angular", "Nodejs"],
       others: [
         "AWS",
         "Serverless",
