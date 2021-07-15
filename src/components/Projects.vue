@@ -8,8 +8,8 @@
 
     <div class="gradients" v-for="(project, i) in projects" :key="i">
       <div class="project">
-        <a :href="project.href" target="_blank">
-          <img class="project__img" :src="project.img" :alt="project.alt" />
+        <a :href="project.href" target="_blank" :class="{ chabu__container: project.title === 'Chabu - (Not currently hosted)' }">
+          <img class="project__img" :src="project.img" :alt="project.alt" :class="{ chabu: project.title === 'Chabu - (Not currently hosted)' }"/>
         </a>
 
         <div class="project__info">
@@ -34,7 +34,16 @@ export default {
   data() {
     return {
       projects: [
-        
+        {
+          img: require("./../assets/chabu.gif"),
+          atl: "A preview of Chabu",
+          title: "Chabu - (Not currently hosted)",
+          href: "",
+          description:
+            "Chabu is an application aimed to allow students to anonymously ask professors questions during lectures through the use of live notifications. As it stands, the backend consists of a Nodejs server which was built in a manner to meet REST best practices. <br/> <br/> In short, the server handles authentication, authorization, validation, errors, security and efficiently queries MongoDB through ES6 standards. The user interface was designed using Adobe XD and developed with React",
+          link: "https://github.com/mugtaba-subahi/chabu",
+          list: ["HTML", "CSS", "JavaScript", "Reactjs", "Redux", "Nodejs", "Express", "Mongodb", "PWA"]
+        },
         {
           img: require("./../assets/uth.svg"),
           atl: "A preview of JavaScript, Under the hood",
@@ -100,9 +109,17 @@ export default {
   display: grid;
   box-shadow: 0 3px 10px rgba(86, 18, 142, 0.1), 0 3px 10px rgba(86, 18, 142, 0.2);
 
+  // Chabu
+  &:nth-of-type(1) {
+    background: linear-gradient(rgba(6, 112, 252, 0.7), #422efd);
+
+    .list__item:before {
+      background-color: #95e8c3;
+    }
+  }
 
   // Fly Guys
-  &:nth-of-type(1) {
+  &:nth-of-type(2) {
     background: linear-gradient(rgba(143, 148, 251, 0.7), #ef93ec);
 
     .list__item:before {
@@ -111,7 +128,7 @@ export default {
   }
 
   // JavaScript,Under the Hood
-  &:nth-of-type(2) {
+  &:nth-of-type(3) {
     background: linear-gradient(#005bea, #00c6fb);
 
     .list__item:before {
@@ -120,7 +137,7 @@ export default {
   }
 
   // Athan
-  &:nth-of-type(3) {
+  &:nth-of-type(4) {
     background: linear-gradient(
       rgba(248, 193, 43, 0.9),
       rgba(226, 104, 22, 0.9),
@@ -132,7 +149,7 @@ export default {
   }
 
   // Castle Clash Hub
-  &:nth-of-type(4) {
+  &:nth-of-type(5) {
     background: linear-gradient(#fbc8d4, rgba(213, 69, 165, 0.77));
 
     .list__item:before {
@@ -141,12 +158,20 @@ export default {
   }
 }
 
+.chabu__container {
+  justify-self: center;
+}
+
+.chabu {
+  width: auto !important;
+  height: 400px;
+}
+
 .project {
   .pad-tb-10;
   .pad-lr-6;
   color: white;
   width: 100%;
-  max-width: 500px;
   justify-self: center;
   text-shadow: 0 0.4px 0.4px rgba(0, 0, 0, 0.15);
   font-family: "Roboto";
@@ -156,6 +181,7 @@ export default {
     .box-shadow-2;
     border-radius: 3px;
     width: 100%;
+    max-width: 500px;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
     &:hover {
