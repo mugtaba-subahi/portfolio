@@ -8,8 +8,8 @@
 
     <div class="gradients" v-for="(project, i) in projects" :key="i">
       <div class="project">
-        <a :href="project.href" target="_blank" :class="{ chabu__container: project.title === 'Chabu - (Not currently hosted)' }">
-          <img class="project__img" :src="project.img" :alt="project.alt" :class="{ chabu: project.title === 'Chabu - (Not currently hosted)' }"/>
+        <a :href="project.href" target="_blank" :class="{ chabu__container: project.title === 'Chabu - (Not currently live)' }">
+          <img class="project__img" :src="project.img" :alt="project.alt" :class="{ chabu: project.title === 'Chabu - (Not currently live)' }"/>
         </a>
 
         <div class="project__info">
@@ -37,7 +37,7 @@ export default {
         {
           img: require("./../assets/chabu.gif"),
           atl: "A preview of Chabu",
-          title: "Chabu - (Not currently hosted)",
+          title: "Chabu - (Not currently live)",
           href: "",
           description:
             "Chabu is an application aimed to allow students to anonymously ask professors questions during lectures through the use of live notifications. As it stands, the backend consists of a Nodejs server which was built in a manner to meet REST best practices. <br/> <br/> In short, the server handles authentication, authorization, validation, errors, security and efficiently queries MongoDB through ES6 standards. The user interface was designed using Adobe XD and developed with React",
